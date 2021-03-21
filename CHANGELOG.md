@@ -2,4 +2,6 @@
 
 #### Features
 
-- **N/A**
+- **New Menu**
+- **New Drawer**
+- **New Navigation**
