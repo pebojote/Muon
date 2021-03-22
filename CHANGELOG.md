@@ -1,7 +1,7 @@
 # 0.1.0 (2021.3.20)
 
-#### Features
+## Features
 
-- **New Menu**
-- **New Drawer**
-- **New Navigation**
+- New Menu
+- New Drawer
+- New Navigation
