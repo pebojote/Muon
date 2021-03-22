@@ -1,7 +1,6 @@
-# 0.1.0 (2021.3.20)
+# 0.2.0 (2021.3.22)
 
 ## Features
 
-- New Menu
-- New Drawer
-- New Navigation
+- Icons
+- Muon Setup.exe for Windows
