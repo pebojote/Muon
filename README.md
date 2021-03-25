@@ -23,7 +23,7 @@ $ yarn
 Start the app in the `dev` environment:
 
 ```bash
-$ yarn start
+$ npx yarn start
 ```
 
 ## Packaging for Production
@@ -31,7 +31,7 @@ $ yarn start
 To package apps for the local platform:
 
 ```bash
-$ yarn package
+$ npx yarn package
 ```
 
 ## License
