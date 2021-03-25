@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import CustomizedDialogs from './dialog';
+import CustomizedDialogs from './dialog.filter';
 
 const useStyles = makeStyles({
   root: {
