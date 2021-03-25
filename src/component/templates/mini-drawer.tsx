@@ -37,6 +37,13 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
     },
+    normLink: {
+      textDecoration: 'none',
+      color: '#000000',
+      '&hover': {
+        textDecoration: 'none !important',
+      },
+    },
     appBar: {
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
@@ -202,7 +209,7 @@ export default function MiniDrawer({ Navigate }) {
         <Divider />
         <List style={{ backgroundColor: '#f2fcfe' }}>
           <Router>
-            <Link to="/">
+            <Link to="/" className={classes.normLink}>
               <ListItem button>
                 <ListItemIcon>
                   <HomeIcon />
@@ -210,7 +217,7 @@ export default function MiniDrawer({ Navigate }) {
                 <ListItemText primary="Home" />
               </ListItem>
             </Link>
-            <Link to="/favorite">
+            <Link to="/favorite" className={classes.normLink}>
               <ListItem button>
                 <ListItemIcon>
                   <FavoriteIcon />
