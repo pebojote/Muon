@@ -11,6 +11,7 @@ OFFLINETSX="src/component/templates/offline.tsx"
 POPULARTSX="src/component/templates/popular.tsx"
 TABSTSX="src/component/templates/tabs.tsx"
 
+alias addappcss="git add $APPCSS && git commit"
 alias addpackagemanager="git add $PACKAGEMANAGER && git commit"
 alias addhome="git add $HOMETSX && git commit"
 alias addcheckboxfilter="git add $CHECKBOXFILTERTSX && git commit"
