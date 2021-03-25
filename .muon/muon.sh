@@ -25,3 +25,4 @@ alias addpopular="git add $POPULARTSX && git commit"
 alias addtabs="git add $TABSTSX && git commit"
 
 alias push="git push origin master"
+alias pull="git pull origin master"
