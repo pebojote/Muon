@@ -6,6 +6,7 @@ import {
   makeStyles,
   useTheme,
   Theme,
+  fade,
 } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -25,6 +26,9 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
+import IconLabelTabs from './tabs';
 
 const drawerWidth = 240;
 
@@ -89,6 +93,37 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       padding: theme.spacing(3),
     },
+    search: {
+      margin: 5,
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.black, 0.15),
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+    },
   })
 );
 
@@ -98,7 +133,6 @@ export default function MiniDrawer({ Navigate }) {
   const [open, setOpen] = React.useState(false);
 
   const Home = Navigate[0];
-  const AndroidList = Navigate[1];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -134,6 +168,13 @@ export default function MiniDrawer({ Navigate }) {
           <Typography variant="h6" noWrap>
             Muon
           </Typography>
+          <div style={{ flexGrow: 1 }} />
+          <Button
+            color="inherit"
+            style={{ backgroundColor: '#000046', textTransform: 'none' }}
+          >
+            <AddIcon /> Add Library
+          </Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -193,12 +234,10 @@ export default function MiniDrawer({ Navigate }) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        <IconLabelTabs />
         <Router>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/Android">
-            <AndroidList />
           </Route>
         </Router>
       </main>
