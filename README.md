@@ -15,7 +15,7 @@ First, clone the repo via git and install dependencies:
 ```bash
 $ git clone --depth 1 --single-branch https://github.com/workpebojot/Muon.git your-project-name
 $ cd your-project-name
-$ yarn
+$ npx yarn
 ```
 
 ## Starting Development
