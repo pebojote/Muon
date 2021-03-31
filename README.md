@@ -2,8 +2,10 @@
 
 <br>
 
+# Muon: A Software Project Manage Tool
+
 <p>
-  Muon uses <a href="https://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="https://webpack.github.io/docs/">Webpack</a> and <a href="https://www.npmjs.com/package/react-refresh">React Fast Refresh</a>.
+  The muon is a software package directory tool. It helps find packages, modules, or libraries you can use for you software project.
 </p>
 
 <br>
