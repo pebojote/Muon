@@ -15,7 +15,7 @@
 First, clone the repo via git and install dependencies:
 
 ```bash
-$ git clone --depth 1 --single-branch https://github.com/workpebojot/Muon.git your-project-name
+$ git clone --depth 1 --single-branch https://github.com/pebojote/Muon.git your-project-name
 $ cd your-project-name
 $ npx yarn
 ```
@@ -38,4 +38,4 @@ $ npx yarn package
 
 ## License
 
-MIT © [Muon](https://github.com/workpebojot/Muon)
+MIT © [Muon](https://github.com/pebojote/Muon)
