@@ -4,7 +4,7 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch: {}
 
 jobs:
   build:
@@ -17,7 +17,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18  # Use modern Node, works with sass
+
+      - name: Replace node-sass with sass
+        run: |
+          yarn remove node-sass || true
+          yarn add sass
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -39,13 +44,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: muon-installer
-          path: ./release
+          path: release
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
-          files: ./release/**
+          files: release/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
