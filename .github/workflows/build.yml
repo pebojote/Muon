@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   build:
@@ -11,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16
 
@@ -28,4 +29,23 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: muon-installer
-          path: release/
+          path: release/**
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: muon-installer
+          path: ./release
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: ./release/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
