@@ -87,7 +87,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/workpebojot/Muon.git"
+    "url": "git+https://github.com/pebojote/Muon.git"
   },
   "author": {
     "name": "Edison Pebojot",
@@ -110,7 +110,7 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/workpebojot/Muon#readme",
+  "homepage": "https://github.com/pebojote/Muon#readme",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {

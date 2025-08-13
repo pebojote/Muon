@@ -47,7 +47,7 @@ const exploreData = async (filter) => {
   try {
     const promises = [];
     const sample = [
-      'workpebojot/Vacuum',
+      'pebojote/Vacuum',
       'facebook/react',
       'd3/d3',
       'jashkenas/underscore',
